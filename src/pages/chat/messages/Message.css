@@ -1,0 +1,6 @@
+.chat__message-details {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.2rem;
+  color: rgb(112, 117, 121);
+}

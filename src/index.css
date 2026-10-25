@@ -1,0 +1,101 @@
+:root {
+  --border-radius-md: 1.6rem;
+  --border-radius-lg: 3.2rem;
+  --clr-green: #3b9702;
+  --clr-blue: #3390ec;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  color: rgb(0, 0, 0);
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-image: linear-gradient(135deg, #a2cc96 0%, #82b772 100%);
+  position: relative;
+  overflow: hidden;
+  font-family:
+    "Roboto", "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+    "Helvetica Neue", sans-serif;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("@assets/pattern.svg");
+  background-repeat: repeat;
+  background-size: 440px;
+  background-blend-mode: overlay;
+  opacity: 0.06;
+  z-index: 0;
+  pointer-events: none;
+}
+
+form {
+  width: 100%;
+}
+
+button[disabled] {
+  opacity: 0.5;
+}
+
+.mt-10 {
+  margin-top: 1rem;
+}
+
+.ml-10 {
+  margin-left: 1rem;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.form-control {
+  --current-color: var(--clr-green);
+  width: 100%;
+  border-radius: var(--border-radius-md);
+  min-height: 4.8rem;
+  outline: none;
+  padding: 1.2rem 1.5rem;
+  line-height: 2.1rem;
+  font-size: 1.6rem;
+  border: none;
+}
+
+.form-control.--border {
+  border: 0.1rem solid rgb(223, 225, 229);
+}
+
+.form-control:focus-visible {
+  border-color: var(--current-color);
+}
+
+.form-components {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.--blue {
+  --current-color: var(--clr-blue);
+}

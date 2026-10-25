@@ -1,0 +1,6 @@
+.btn {
+  background-color: var(--current-color);
+  cursor: pointer;
+  color: white;
+  font-size: 1.6rem;
+}
